@@ -28,7 +28,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         {
             addressBuilder.Property(a => a.FirstName).IsRequired().HasMaxLength(50);
             addressBuilder.Property(a => a.LastName).IsRequired().HasMaxLength(50);
-            addressBuilder.Property(a => a.EmailAddresss).HasMaxLength(50);
+            addressBuilder.Property(a => a.EmailAddress).HasMaxLength(50);
             addressBuilder.Property(a => a.AddressLine).IsRequired().HasMaxLength(180);
             addressBuilder.Property(a => a.State).IsRequired().HasMaxLength(100);
             addressBuilder.Property(a => a.ZipCode).IsRequired().HasMaxLength(5);
@@ -39,7 +39,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         {
             addressBuilder.Property(a => a.FirstName).IsRequired().HasMaxLength(50);
             addressBuilder.Property(a => a.LastName).IsRequired().HasMaxLength(50);
-            addressBuilder.Property(a => a.EmailAddresss).HasMaxLength(50);
+            addressBuilder.Property(a => a.EmailAddress).HasMaxLength(50);
             addressBuilder.Property(a => a.AddressLine).IsRequired().HasMaxLength(180);
             addressBuilder.Property(a => a.State).IsRequired().HasMaxLength(100);
             addressBuilder.Property(a => a.ZipCode).IsRequired().HasMaxLength(5);

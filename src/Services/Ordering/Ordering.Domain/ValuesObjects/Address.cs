@@ -3,7 +3,7 @@ public record Address
 {
     public string FirstName { get; } = default!;
     public string LastName { get; } = default!;
-    public string EmailAddresss { get; } = default!;
+    public string EmailAddress { get; } = default!;
     public string AddressLine { get; } = default!;
     public string Country { get; } = default!;
     public string State { get; } = default!;
@@ -14,7 +14,7 @@ public record Address
     {
         FirstName = firstName;
         LastName = lastName;
-        EmailAddresss = emailAddresss;
+        EmailAddress = emailAddresss;
         AddressLine = addressLine;
         Country = country;
         State = state;
