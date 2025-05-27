@@ -10,7 +10,16 @@ public class Order : Aggregate<OrderId>
     public Address BillingAddress { get; private set; } = default!;
     public Payment Payment { get; private set; } = default!;
     public OrderStatus Status { get; private set; } = OrderStatus.Pending;
-    public decimal TotalPrice => _orderItems.Sum(item => item.Price * item.Quantity);
+
+    public decimal TotalPrice
+    {
+        get => _orderItems.Sum(item => item.Price * item.Quantity);
+#pragma warning disable S1144 // Unused private types or members should be removed
+#pragma warning disable S3237 // "value" contextual keyword should be used
+        private set { /* Used by EF */ }
+#pragma warning restore S3237 // "value" contextual keyword should be used
+#pragma warning restore S1144 // Unused private types or members should be removed
+    }
 
     public static Order Create(
         OrderId id,
