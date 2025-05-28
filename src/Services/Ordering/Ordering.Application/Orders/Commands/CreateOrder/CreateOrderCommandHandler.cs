@@ -18,7 +18,7 @@ public class CreateOrderCommandHandler(IApplicationDbContext context) : ICommand
         var shippingAddress = Address.Of(
             shippingAddressDto.FirstName,
             shippingAddressDto.LastName,
-            shippingAddressDto.EmailAddresss,
+            shippingAddressDto.EmailAddress,
             shippingAddressDto.AddressLine,
             shippingAddressDto.Country,
             shippingAddressDto.State,
@@ -26,7 +26,7 @@ public class CreateOrderCommandHandler(IApplicationDbContext context) : ICommand
         var billingAddress = Address.Of(
             billingAddressDto.FirstName,
             billingAddressDto.LastName,
-            billingAddressDto.EmailAddresss,
+            billingAddressDto.EmailAddress,
             billingAddressDto.AddressLine,
             billingAddressDto.Country,
             billingAddressDto.State,
@@ -38,7 +38,7 @@ public class CreateOrderCommandHandler(IApplicationDbContext context) : ICommand
             paymentDto.Cvv,
             paymentDto.PaymentMethod);
         var order = Order.Create(
-            OrderId.Of(orderDto.Id),
+            OrderId.Of(Guid.NewGuid()),
             CustomerId.Of(orderDto.CustomerId),
             OrderName.Of(orderDto.OrderName),
             shippingAddress,

@@ -3,7 +3,7 @@
 public record AddressDto(
     string FirstName,
     string LastName,
-    string EmailAddresss,
+    string EmailAddress,
     string AddressLine,
     string Country,
     string State,

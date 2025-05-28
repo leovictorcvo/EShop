@@ -10,26 +10,26 @@ public record Address
     public string ZipCode { get; } = default!;
 
     protected Address() { }
-    private Address(string firstName, string lastName, string emailAddresss, string addressLine, string country, string state, string zipCode)
+    private Address(string firstName, string lastName, string emailAddress, string addressLine, string country, string state, string zipCode)
     {
         FirstName = firstName;
         LastName = lastName;
-        EmailAddress = emailAddresss;
+        EmailAddress = emailAddress;
         AddressLine = addressLine;
         Country = country;
         State = state;
         ZipCode = zipCode;
     }
-    public static Address Of(string firstName, string lastName, string emailAddresss, string addressLine, string country, string state, string zipCode)
+    public static Address Of(string firstName, string lastName, string emailAddress, string addressLine, string country, string state, string zipCode)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(firstName);
         ArgumentException.ThrowIfNullOrWhiteSpace(lastName);
-        ArgumentException.ThrowIfNullOrWhiteSpace(emailAddresss);
+        ArgumentException.ThrowIfNullOrWhiteSpace(emailAddress);
         ArgumentException.ThrowIfNullOrWhiteSpace(addressLine);
         ArgumentException.ThrowIfNullOrWhiteSpace(country);
         ArgumentException.ThrowIfNullOrWhiteSpace(state);
         ArgumentException.ThrowIfNullOrWhiteSpace(zipCode);
 
-        return new Address(firstName, lastName, emailAddresss, addressLine, country, state, zipCode);
+        return new Address(firstName, lastName, emailAddress, addressLine, country, state, zipCode);
     }
 }

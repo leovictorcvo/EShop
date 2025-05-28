@@ -21,7 +21,7 @@ public class UpdateOrderCommandHandler(IApplicationDbContext context) : ICommand
         var shippingAddress = Address.Of(
             shippingAddressDto.FirstName,
             shippingAddressDto.LastName,
-            shippingAddressDto.EmailAddresss,
+            shippingAddressDto.EmailAddress,
             shippingAddressDto.AddressLine,
             shippingAddressDto.Country,
             shippingAddressDto.State,
@@ -29,7 +29,7 @@ public class UpdateOrderCommandHandler(IApplicationDbContext context) : ICommand
         var billingAddress = Address.Of(
             billingAddressDto.FirstName,
             billingAddressDto.LastName,
-            billingAddressDto.EmailAddresss,
+            billingAddressDto.EmailAddress,
             billingAddressDto.AddressLine,
             billingAddressDto.Country,
             billingAddressDto.State,
